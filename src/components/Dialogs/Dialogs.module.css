@@ -3,28 +3,5 @@
   display: grid;
   /*grid-template-areas: 'dialogsItem messages';*/
   grid-template-columns: 2fr 8fr;
-}
-
-.dialogsItem {
-  /*grid-area: dialogsItem;*/
-  background: rgba(255, 192, 203, 0.44);
   padding: 10px;
-}
-
-a {
-  color: black;
-}
-
-.active {
-  color: darkgoldenrod;
-}
-
-.messages {
-
-}
-
-.message {
-  /*grid-area: messages;*/
-  background: rgba(255, 228, 196, 0.45);
-  padding: 5px;
 }
