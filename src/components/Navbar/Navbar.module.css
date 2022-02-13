@@ -1,0 +1,24 @@
+.nav {
+  grid-area: nav;
+  background: teal;
+  height: 500px;
+  padding: 20px;
+}
+
+/*react-router-dom - Link*/
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*a:focus, a:hover, a:active {*/
+/*  color: blue;*/
+/*}*/
+
+/*a .active {*/
+/*  color: blue;*/
+/*}*/
+
+.isActive {
+  color: gold;
+}
