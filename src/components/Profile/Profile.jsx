@@ -1,15 +1,16 @@
 import React from 'react';
-import styles from './Profile.module.css'
+// import styles from './Profile.module.css'
 
 //Components
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+//
 
-const Profile = () => {
+const Profile = ({ posts }) => {
   return (
     <div>
       <ProfileInfo />
-      <MyPosts />
+      <MyPosts posts={posts}/>
     </div>
   );
 };

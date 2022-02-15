@@ -4,21 +4,16 @@ import styles from './MyPosts.module.css'
 //Components
 import Post from "./Post/Post";
 
-let postsData = [
-  {likes: 12, message: 'Hi, i am Igor'},
-  {likes: 4, message: 'I go walk!'},
-  {likes: 31, message: 'Hello, world...'},
-]
+const MyPosts = ({ posts }) => {
 
-let postElement = postsData.map(({likes, message}) => <Post likes={likes} message={message} />)
+  let postElement = posts.map(({likes, message}) => <Post likes={likes} message={message} />)
 
-const MyPosts = () => {
   return (
     <div className={styles.postsBlock}>
       <div>
         <h3>New post</h3>
         <div>
-          <textarea name="" id="" cols="80" rows="5"></textarea>
+          <textarea name="" id="" cols="80" rows="5">Hello</textarea>
         </div>
         <div>
           <button>Add post</button>
