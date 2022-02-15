@@ -8,7 +8,7 @@ import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
 //
 
-function App({ posts, dialogs, messages }) {
+function App({posts, dialogs, messages}) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
