@@ -1,5 +1,5 @@
 import React from 'react';
-import module from './Dialogs.module.css'
+import styles from './Dialogs.module.css'
 
 //Components
 import {DialogItem} from "./DialogItem/DialogItem";
@@ -25,7 +25,7 @@ let messageElement = messagesData.map(({message, id}) => <Message id={id} messag
 
 const Dialogs = () => {
   return (
-    <div className={module.dialogs}>
+    <div className={styles.dialogs}>
       <div>
         { dialogElement }
       </div>

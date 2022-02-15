@@ -1,9 +1,9 @@
 import React from 'react';
-import module from "./Post.module.css";
+import styles from "./Post.module.css";
 
 const Post = (props) => {
   return (
-    <div className={module.item}>
+    <div className={styles.item}>
       <img src="https://html5css.ru/howto/img_avatar.png" alt="avatar"/>
       {props.message}
       <div>

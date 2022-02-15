@@ -1,15 +1,15 @@
 import React from 'react';
-import module from './Navbar.module.css'
+import styles from './Navbar.module.css'
 import {Link, NavLink} from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className={module.nav}>
+    <nav className={styles.nav}>
       <div>
-        <NavLink to="/profile" className={({isActive}) => isActive ? module.isActive : "white"}>Profile</NavLink>
+        <NavLink to="/profile" className={({isActive}) => isActive ? styles.isActive : "white"}>Profile</NavLink>
       </div>
       <div>
-        <NavLink to="/dialogs" className={({isActive}) => isActive ? module.isActive : "white"}>Messages</NavLink>
+        <NavLink to="/dialogs" className={({isActive}) => isActive ? styles.isActive : "white"}>Messages</NavLink>
       </div>
       <div>
         <a href="">News</a>

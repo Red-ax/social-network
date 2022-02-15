@@ -1,5 +1,5 @@
 import React from 'react';
-import module from './MyPosts.module.css'
+import styles from './MyPosts.module.css'
 
 //Components
 import Post from "./Post/Post";
@@ -14,7 +14,7 @@ let postElement = postsData.map(({likes, message}) => <Post likes={likes} messag
 
 const MyPosts = () => {
   return (
-    <div className={module.postsBlock}>
+    <div className={styles.postsBlock}>
       <div>
         <h3>New post</h3>
         <div>
@@ -26,7 +26,7 @@ const MyPosts = () => {
         <h3>My post</h3>
       </div>
 
-      <div className={module.posts}>
+      <div className={styles.posts}>
         { postElement }
       </div>
     </div>

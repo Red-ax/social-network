@@ -1,5 +1,5 @@
 import React from 'react';
-import module from './Profile.module.css'
+import styles from './Profile.module.css'
 
 //Components
 import MyPosts from "./MyPosts/MyPosts";
