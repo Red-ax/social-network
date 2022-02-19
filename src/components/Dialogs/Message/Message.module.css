@@ -1,9 +1,20 @@
-.messages {
+.container {
+  width: 100%;
+  display: flex;
+  /*justify-content: flex-end;*/
+}
 
+.messages {
+  background: #f2f5f5;
+  padding: 5px;
+  margin: 5px;
+  
+  /*border: 1px solid teal;*/
+  border-radius: 10px 10px 0 10px;
+  display: inline-block;
+  justify-content: flex-end;
 }
 
 .message {
-  /*grid-area: messages;*/
-  background: rgba(255, 228, 196, 0.45);
-  padding: 5px;
+  /*display: inline-block;*/
 }

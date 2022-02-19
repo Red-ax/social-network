@@ -1,13 +1,37 @@
 .dialogsItem {
-  /*grid-area: dialogsItem;*/
-  background: rgba(255, 192, 203, 0.44);
+  display: grid;
+  grid-template-areas: 'userAvatar NavLink';
+  grid-template-columns: 1fr 5fr;
+  
+  /*background: rgba(255, 192, 203, 0.44);*/
+  border: 1px solid #f2f5f5;
+  border-radius: 10px;
   padding: 5px;
+  margin: 5px;
 }
 
-a {
+.userAvatar {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  grid-area: userAvatar;
+  border-radius: 50%;
+}
+
+/*a {*/
+/*  color: black;*/
+/*  font-size: 16px;*/
+/*  grid-area: NavLink;*/
+/*}*/
+
+.notActive {
+  text-decoration: none;
   color: black;
+  font-size: 16px;
+  grid-area: NavLink;
 }
 
 .active {
-  color: darkgoldenrod;
+  text-decoration: none;
+  color: white;
 }

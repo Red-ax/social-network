@@ -13,6 +13,7 @@
 
 .app-wrapper-content {
   grid-area: content;
-  background: #cecece;
+  background: rgba(0, 128, 128, 0.31);
+  border-radius: 20px;
 }
 

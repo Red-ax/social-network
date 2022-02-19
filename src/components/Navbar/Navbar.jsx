@@ -1,24 +1,33 @@
 import React from 'react';
 import styles from './Navbar.module.css'
-import {Link, NavLink} from "react-router-dom";
 
-const Navbar = () => {
+////Components
+import {NavLink} from "react-router-dom";
+import Friends from "./Friends/Friends";
+//
+
+const Navbar = ({ sidebar }) => {
   return (
     <nav className={styles.nav}>
       <div>
-        <NavLink to="/profile" className={({isActive}) => isActive ? styles.isActive : "white"}>Profile</NavLink>
+        <div>
+          <NavLink to="/profile" className={({isActive}) => isActive ? styles.active : styles.notActive}>Profile</NavLink>
+        </div>
+        <div>
+          <NavLink to="/dialogs" className={({isActive}) => isActive ? styles.active : styles.notActive}>Messages</NavLink>
+        </div>
+        <div>
+          <a className={styles.notActive} href="">News</a>
+        </div>
+        <div>
+          <a className={styles.notActive} href="">Music</a>
+        </div>
+        <div>
+          <a className={styles.notActive} href="">Settings</a>
+        </div>
       </div>
       <div>
-        <NavLink to="/dialogs" className={({isActive}) => isActive ? styles.isActive : "white"}>Messages</NavLink>
-      </div>
-      <div>
-        <a href="">News</a>
-      </div>
-      <div>
-        <a href="">Music</a>
-      </div>
-      <div>
-        <a href="">Settings</a>
+        <Friends sidebar={sidebar}/>
       </div>
     </nav>
   );

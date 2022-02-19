@@ -4,7 +4,7 @@ import styles from './Header.module.css'
 const Header = () => {
   return (
     <header className={styles.header}>
-      <img className={styles.logo} src="https://cutewallpaper.org/24/adobe-photoshop-logo-png/best-windows-10-photo-editing-apps-2021-windows-central.png" alt=""/>
+      <img className={styles.logo} src="https://seeklogo.com/images/A/adobe-photoshop-cc-circle-logo-3BE8AF841D-seeklogo.com.png" alt=""/>
     </header>
   );
 };

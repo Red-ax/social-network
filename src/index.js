@@ -4,15 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from "./redux/state";
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App
-      posts={state.profilePage.posts}
-      dialogs={state.dialogsPage.dialogs}
-      messages={state.dialogsPage.messages}
-    />
-  </React.StrictMode>,
+    <BrowserRouter>
+      <App
+        posts={state.profilePage.posts}
+        dialogs={state.dialogsPage.dialogs}
+        messages={state.dialogsPage.messages}
+        sidebar={state.navbar.sidebar}
+      />
+    </BrowserRouter>,
   document.getElementById('root')
 );
 

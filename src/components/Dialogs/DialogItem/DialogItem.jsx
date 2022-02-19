@@ -6,7 +6,8 @@ export const DialogItem = (props) => {
   return (
     <div>
       <div className={styles.dialogsItem}>
-        <NavLink to={`/dialogs/${props.id}`} className={({isActive}) => isActive ? styles.active : "white"}>
+        <img className={styles.userAvatar} src="https://mpng.subpng.com/20180523/tha/kisspng-businessperson-computer-icons-avatar-clip-art-lattice-5b0508dc6a3a10.0013931115270566044351.jpg" alt="avatar"/>
+        <NavLink to={`/dialogs/${props.id}`} className={({isActive}) => isActive ? styles.active : styles.notActive}>
           {props.name}
         </NavLink>
       </div>

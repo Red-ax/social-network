@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import './App.css';
 
 //Components
@@ -6,14 +6,14 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialogs";
+
 //
 
-function App({posts, dialogs, messages}) {
+function App({posts, dialogs, messages, sidebar}) {
   return (
-    <BrowserRouter>
       <div className="app-wrapper">
         <Header/>
-        <Navbar/>
+        <Navbar sidebar={sidebar}/>
         <div className='app-wrapper-content'>
           <Routes>
             <Route path='/profile' element={<Profile posts={posts}/>}/>
@@ -21,7 +21,6 @@ function App({posts, dialogs, messages}) {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
   );
 }
 

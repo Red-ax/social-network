@@ -5,3 +5,28 @@
 .posts {
 
 }
+
+.postArea {
+  font-family: sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.postArea:focus {
+  outline: none;
+}
+
+.addPostButton {
+  height: 42px;
+  width: 144px;
+  font-size: 16px;
+  border: 1px solid #f2f5f5;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.46);
+  cursor: pointer;
+}
+
+.addPostButton:active {
+  color: rgb(159, 159, 159);
+}
+

@@ -1,12 +1,23 @@
 .nav {
   grid-area: nav;
-  background: teal;
+  background: rgba(0, 128, 128, 0.31);
+  /*border: 1px solid teal;*/
+  border-radius: 20px;
   height: 500px;
   padding: 20px;
 }
 
 /*react-router-dom - Link*/
-a {
+/*a {*/
+/*  text-decoration: none;*/
+/*  color: white;*/
+/*}*/
+
+.notActive {
+  text-decoration: none;
+  color: black;
+}
+.active {
   text-decoration: none;
   color: white;
 }
@@ -18,7 +29,3 @@ a {
 /*a .active {*/
 /*  color: blue;*/
 /*}*/
-
-.isActive {
-  color: gold;
-}
