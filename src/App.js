@@ -9,15 +9,15 @@ import Dialogs from "./components/Dialogs/Dialogs";
 
 //
 
-function App({posts, dialogs, messages, sidebar}) {
+function App(props) {
   return (
       <div className="app-wrapper">
         <Header/>
-        <Navbar sidebar={sidebar}/>
+        <Navbar sidebar={props.state.navbar}/>
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/profile' element={<Profile posts={posts}/>}/>
-            <Route path='/dialogs/*' element={<Dialogs dialogs={dialogs} messages={messages}/>}/>
+            <Route path='/profile' element={<Profile profilePage={props.state.profilePage} addPostMessage={props.addPostMessage}/>}/>
+            <Route path='/dialogs/*' element={<Dialogs dialogsPage={props.state.dialogsPage}/>}/>
           </Routes>
         </div>
       </div>

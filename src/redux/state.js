@@ -1,7 +1,9 @@
+import {rerenderEntireTree} from "./render";
+
 let posts = [
-  {likes: 12, message: 'Hi, i am Igor'},
-  {likes: 4, message: 'I go walk!'},
-  {likes: 31, message: 'Hello, world...'},
+  {message: 'Hi, i am Igor', likes: 12},
+  {message: 'I go walk!', likes: 4},
+  {message: 'Hello, world...', likes: 31},
 ]
 
 let dialogs = [
@@ -28,7 +30,7 @@ let sidebar = [
     name: 'Anna'},
   {avatar: 'https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small/beautiful-latin-woman-avatar-character-icon-free-vector.jpg',
     name: 'Sveta'},
-]
+];
 
 let state = {
   profilePage: {
@@ -43,4 +45,15 @@ let state = {
   },
 }
 
+const addPostMessage = (postMessage) => {
+  let newPost = {
+    message: postMessage,
+    likes: 2,
+  };
+  posts.push(newPost);
+
+  rerenderEntireTree(state, addPostMessage)
+}
+
+export { addPostMessage };
 export default state;

@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './Friends.module.css'
 import SidebarFrend from "./SidebarFriend/SidebarFrend";
 
-const Friends = ({ sidebar }) => {
-
+const Friends = (props) => {
+  let sidebar = props.sidebar.sidebar;
   let sidebarElement = sidebar.map(({ avatar, name }) => <SidebarFrend avatar={avatar} name={name}/>)
 
   return (

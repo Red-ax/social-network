@@ -4,15 +4,16 @@ import styles from './MyPosts.module.css'
 //Components
 import Post from "./Post/Post";
 
-const MyPosts = ({ posts }) => {
-
-  let postElement = posts.map(({likes, message}) => <Post likes={likes} message={message} />)
+const MyPosts = (props) => {
+  let postElement = props.posts.map(({likes, message}) => <Post likes={likes} message={message} />)
 
   let newPostElement = React.createRef();
 
   const addPost = () => {
     let text = newPostElement.current.value;
-    alert(text);
+    props.addPostMessage(text);
+
+    newPostElement.current.value = '';
   }
 
   return (
