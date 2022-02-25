@@ -35,6 +35,7 @@ let sidebar = [
 let state = {
   profilePage: {
     posts: posts,
+    newPostText: '',
   },
   dialogsPage: {
     dialogs: dialogs,
@@ -45,15 +46,20 @@ let state = {
   },
 }
 
-const addPostMessage = (postMessage) => {
+const addPostMessage = () => {
   let newPost = {
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likes: 2,
   };
   posts.push(newPost);
-
+  state.profilePage.newPostText = '';
   rerenderEntireTree(state, addPostMessage)
-}
+};
 
-export { addPostMessage };
+const updatePost = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+
+export { addPostMessage, updatePost };
 export default state;
