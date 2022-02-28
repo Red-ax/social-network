@@ -1,5 +1,3 @@
-import {rerenderEntireTree} from "./render";
-
 let posts = [
   {message: 'Hi, i am Igor', likes: 12},
   {message: 'I go walk!', likes: 4},
@@ -32,34 +30,43 @@ let sidebar = [
     name: 'Sveta'},
 ];
 
-let state = {
-  profilePage: {
-    posts: posts,
-    newPostText: '',
+let store = {
+  _state: {
+    profilePage: {
+      posts: posts,
+      newPostText: '',
+    },
+    dialogsPage: {
+      dialogs: dialogs,
+      messages: messages,
+    },
+    navbar: {
+      sidebar: sidebar,
+    },
   },
-  dialogsPage: {
-    dialogs: dialogs,
-    messages: messages,
+  getState() {
+    return this._state
   },
-  navbar: {
-    sidebar: sidebar,
+  _callSabscriber() {
+    console.log('state onChage test')
+  },
+  addPostMessage() {
+    let newPost = {
+      message: this._state.profilePage.newPostText,
+      likes: 2,
+    };
+    posts.push(newPost);
+    this._state.profilePage.newPostText = '';
+    this._callSabscriber(this._state, this.addPostMessage)
+  },
+  updatePost(newText) {
+    this._state.profilePage.newPostText = newText;
+    this._callSabscriber(this._state);
+  },
+  subscribe(observer) {
+    this._callSabscriber = observer;
   },
 }
 
-const addPostMessage = () => {
-  let newPost = {
-    message: state.profilePage.newPostText,
-    likes: 2,
-  };
-  posts.push(newPost);
-  state.profilePage.newPostText = '';
-  rerenderEntireTree(state, addPostMessage)
-};
-
-const updatePost = (newText) => {
-  state.profilePage.newPostText = newText;
-  rerenderEntireTree(state);
-};
-
-export { addPostMessage, updatePost };
-export default state;
+// export { addPostMessage, updatePost, subscribe };
+export default store;
